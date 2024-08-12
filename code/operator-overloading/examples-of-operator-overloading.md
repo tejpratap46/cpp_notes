@@ -30,34 +30,67 @@ int main() {
 #include <iostream>
 #include <cstring>
 
-class MyString {
-public:
-    char *str;
+class StringWrapper {
+private:
+    char* str;
 
-    MyString(const char *s) {
-        int len = strlen(s);
-        str = new char[len + 1];
-        strcpy(str, s);
+public:
+    // Constructor
+    StringWrapper(const char* s = nullptr) {
+        if (s) {
+            str = new char[strlen(s) + 1];
+            strcpy(str, s);
+        } else {
+            str = new char[1];
+            str[0] = '\0';
+        }
     }
 
-    // Overloaded assignment operator
-    MyString& operator=(const MyString& other) {
-        std::cout << "= is overriden" << std::endl;
-        if (this != &other) { // Self-assignment check
+    // Destructor
+    ~StringWrapper() {
+        delete[] str;
+    }
+
+    // Copy constructor
+    StringWrapper(const StringWrapper& other) {
+        str = new char[strlen(other.str) + 1];
+        strcpy(str, other.str);
+    }
+
+    // Assignment operator overloading
+    StringWrapper& operator=(const StringWrapper& other) {
+        if (this != &other) {  // Self-assignment check
+            // Free the existing resource
             delete[] str;
-            int len = strlen(other.str);
-            str = new char[len + 1];
+
+            // Allocate new resource and copy
+            str = new char[strlen(other.str) + 1];
             strcpy(str, other.str);
         }
         return *this;
     }
+
+    // Method to get the string
+    const char* getString() const {
+        return str;
+    }
 };
 
 int main() {
-    MyString s1("Hello");
-    MyString s2("World");
-    s2 = s1; // Using the overloaded assignment operator
-    std::cout << s2.str << std::endl;
+    StringWrapper s1("Hello");
+    StringWrapper s2("World");
+    StringWrapper s3 = s1;  // Copy constructor
+
+    std::cout << "s1: " << s1.getString() << std::endl;
+    std::cout << "s2: " << s2.getString() << std::endl;
+    std::cout << "s3: " << s3.getString() << std::endl;
+
+    s2 = s1;  // Assignment operator
+
+    std::cout << "After s2 = s1:" << std::endl;
+    std::cout << "s1: " << s1.getString() << std::endl;
+    std::cout << "s2: " << s2.getString() << std::endl;
+
     return 0;
 }
 ```
