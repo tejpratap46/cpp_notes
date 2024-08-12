@@ -149,23 +149,44 @@ int main() {
 #### Member Access Operators
 
 ```cpp
-class MyClass {
+#include <iostream>
+#include <string>
+
+// A simple class to be wrapped
+class Person {
 public:
-    int value;
+    std::string name;
+    int age;
 
-    MyClass(int v) : value(v) {}
+    void introduce() {
+        std::cout << "Hi, I'm " << name << " and I'm " << age << " years old." << std::endl;
+    }
+};
 
-    MyClass& operator,(const MyClass& other) {
-        // Custom logic here
-        value += other.value;
-        return *this;
+// Our wrapper class
+class PersonWrapper {
+private:
+    Person* ptr;
+
+public:
+    PersonWrapper(Person* p) : ptr(p) {}
+
+    // Overloaded member access operator
+    Person* operator->() {
+        std::cout << "Accessing member of Person object" << std::endl;
+        return ptr;
     }
 };
 
 int main() {
-    MyClass obj1(5), obj2(3);
-    obj1, obj2; // Overloaded comma operator
-    std::cout << obj1.value << std::endl; // Output: 8
+    Person p{"Alice", 30};
+    PersonWrapper wrapped(&p);
+
+    // Using the wrapper to access Person members
+    wrapped->name = "Bob";
+    wrapped->age = 25;
+    wrapped->introduce();
+
     return 0;
 }
 ```
