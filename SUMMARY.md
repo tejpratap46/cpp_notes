@@ -17,6 +17,7 @@
   * [#ifdef](code/pre-processors/ifdef.md)
   * [#pragma](code/pre-processors/pragma.md)
   * [Predefined Macros](code/pre-processors/predefined-macros.md)
+* [LValue and RValue](code/lvalue-and-rvalue.md)
 * [🪅 Data Types](code/data-types/README.md)
   * [Enum](code/data-types/enum.md)
   * [TypeDef](code/data-types/typedef.md)
@@ -62,3 +63,7 @@
   * [Custom vector, part 2](memory/vector-arraylist/custom-vector-part-2.md)
   * [Custom vector, part 3](memory/vector-arraylist/custom-vector-part-3.md)
   * [std::vector](memory/vector-arraylist/std-vector.md)
+
+## Misc
+
+* [Execution Order](misc/execution-order.md)
