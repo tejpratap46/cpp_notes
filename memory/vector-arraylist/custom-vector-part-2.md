@@ -1,6 +1,6 @@
 # Custom vector, part 2
 
-Now, we have created a vector class that will add any new element and resize to any limit (at least till your app goes out of memory).
+In [custom-vector-part-1.md](custom-vector-part-1.md "mention"), we have created a vector class that will add any new element and resize to any limit (at least till your app goes out of memory).
 
 Now, lets try it with a class object, which will store elements on heap, here we can track added items constructor/deconstructor calls.
 

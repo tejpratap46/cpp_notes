@@ -1,5 +1,7 @@
 # Custom vector, part 1
 
+As explained before, what us vector and how it works. In this lesson, we will  try to create vector implementation by ourself, let's begin.
+
 Here is the algorithm:
 
 1. Create a generic class with `template`, it has 3 things:

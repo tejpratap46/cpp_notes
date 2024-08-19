@@ -23,6 +23,7 @@
   * [TypeDef](code/data-types/typedef.md)
   * [const in c++](code/data-types/const-in-c++.md)
   * [extern vs inline](code/data-types/extern-vs-inline.md)
+* [Casting](code/casting.md)
 * [🔃 Operator overloading](code/operator-overloading/README.md)
   * [Available Operators](code/operator-overloading/available-operators.md)
   * [Examples of operator overloading](code/operator-overloading/examples-of-operator-overloading.md)
@@ -63,7 +64,14 @@
   * [Custom vector, part 2](memory/vector-arraylist/custom-vector-part-2.md)
   * [Custom vector, part 3](memory/vector-arraylist/custom-vector-part-3.md)
   * [std::vector](memory/vector-arraylist/std-vector.md)
+* [♻️ Union](memory/union/README.md)
+  * [Type Punning](memory/union/type-punning.md)
+  * [Type Punning, part 2](memory/union/type-punning-part-2.md)
+  * [Type Punning, part 3](memory/union/type-punning-part-3.md)
+  * [Union, part 1](memory/union/union-part-1.md)
+  * [Union, Part 2](memory/union/union-part-2.md)
 
 ## Misc
 
 * [Execution Order](misc/execution-order.md)
+* [Print memory](misc/print-memory.md)

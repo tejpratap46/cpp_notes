@@ -1,5 +1,7 @@
 # std::vector
 
+In [custom-vector-part-3.md](custom-vector-part-3.md "mention"), we tried most of the things that we can do to optimize our vector, but still we end up using unnecessary memory. Thus, instead of trying to create a perfect implementation, we can use a `std::vector` implementation that will provide is the most optimised way to create a vector.
+
 Here's a brief explanation along with an example:
 
 ```cpp
