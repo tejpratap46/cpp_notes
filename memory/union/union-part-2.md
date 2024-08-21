@@ -59,4 +59,9 @@ Output:
 
 Lets explore this example:
 
-1. Here, we created 2 structs, Vector1
+1. Here, we created 2 structs, `Vector1` and `Vector2`.
+2. `Vector1` contains two integers: `a`, `b`.
+3. `Vector2` contains two possible values based on union, either it will have four integers `a`, `b`, `c`, `d` or it will contain 2 `Vector1`.
+4. Now, if we create an object of `Vector2` with values `{1, 2, 3, 4}`.
+5. This `Vector2` instance can be converted into two instances of `Vector1` as it was part of the vector.
+6. And, if we update a value of `Vector2` insrance and read it as `Vector1` Instance, you will see that `Vector1` data has been changes as they are referring to same memory location.

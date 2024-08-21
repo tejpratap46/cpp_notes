@@ -10,10 +10,12 @@ Here is a graph of c++ build process:
    * The preprocessor handles directives like #include, #define, and #ifdef.
    * It expands macros and includes the content of header files.
    * Output: Expanded source code.
+   * Generate pre-processed file using: `g++ -E your_file.cpp > preprocessed.cpp`
 2. Compilation:
    * The compiler translates the preprocessed code into assembly language.
    * This step includes syntax checking and optimization.
    * Output: Assembly code.
+   * Generate Compiled file using: `g++ -S your_code.cpp`
 3. Assembly:
    * The assembler converts the assembly code into machine code.
    * Output: Object files (.o or .obj).
