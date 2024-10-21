@@ -73,7 +73,13 @@
   * [Union, part 1](memory/union/union-part-1.md)
   * [Union, Part 2](memory/union/union-part-2.md)
 
+## Thread
+
+* [🧵 Threading](thread/threading/README.md)
+  * [std::thread](thread/threading/std-thread.md)
+  * [Detach a thread](thread/threading/detach-a-thread.md)
+
 ## Misc
 
-* [Execution Order](misc/execution-order.md)
-* [Print memory](misc/print-memory.md)
+* [🗂️ Execution Order](misc/execution-order.md)
+* [🧠 Print memory](misc/print-memory.md)
